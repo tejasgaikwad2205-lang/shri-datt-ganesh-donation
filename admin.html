@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>🔐 Admin Login</h1>
+</header>
+
+<div class="container">
+
+<input type="text" id="username" placeholder="Username"><br><br>
+
+<input type="password" id="password" placeholder="Password"><br><br>
+
+<button class="btn" onclick="login()">Login</button>
+
+<p id="message"></p>
+
+</div>
+
+<script>
+function login() {
+  const user = document.getElementById("username").value;
+  const pass = document.getElementById("password").value;
+
+  if(user === "hercules2205" && pass === "Satara@123"){
+      window.location.href="dashboard.html";
+  } else {
+      document.getElementById("message").innerHTML =
+      "❌ Invalid Username or Password";
+  }
+}
+</script>
+
+</body>
+</html>
